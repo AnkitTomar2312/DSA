@@ -1,5 +1,5 @@
 #Palindrome Number
-n=int(input("Enetr n: "))
+n=int(input("Enter n: "))
 var=n
 res=0
 while(var!=0):
@@ -11,3 +11,5 @@ if(n==res):
     print("yes")
 else:
     print("no")
+
+    

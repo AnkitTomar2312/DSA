@@ -19,4 +19,4 @@ def countZeros(n):
         n//=5
         res+=n
     return res
-print(countZeros(251))
+print(countZeros(50))
