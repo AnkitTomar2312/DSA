@@ -1,0 +1,13 @@
+Many algorithm techniques are based on recusion:
+
+1. Dynamic Programing
+
+2. Back Tracking
+
+3. Divide & Recursion(Binary Search, Quick Sort, Merge Sort)
+
+Many Problems inherity recursive:
+
+1. Tower Of Hanoi
+
+2. DFS based traversal
