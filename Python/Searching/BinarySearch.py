@@ -19,3 +19,7 @@ def BinSearch(n,x):
 n=[10,20,30,40,50,60]
 x=10
 print(BinSearch(n,x))
+
+
+# Time complexity O(logn) recursive calls
+# Auxiliary Space O(1)
