@@ -16,7 +16,7 @@ def Main(arr,x):
 arr=[10,20,30,40,50,60,70]
 x=80
 
-print(Main(arr,x))
+print(Main(arr,x))  
 
 
 # Time complexity O(logn) recursive calls
