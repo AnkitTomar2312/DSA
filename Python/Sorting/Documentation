@@ -5,6 +5,8 @@ Python has 3 built in method to sort
 
 2. sorted()
     . works for any iterable containers
-    . Does not modify the passed container return a list of sorted items
+    . Does not modify the passed container return a new list of sorted items
+    . Parameters like key and reverse all work in similar way
+    . you will get list as a return value
 
 ==>Both of them use TimSort and both are stable
