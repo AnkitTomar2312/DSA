@@ -1,0 +1,10 @@
+Python has 3 built in method to sort 
+1. sort() 
+    . It is a built in method
+    . In place sorting
+
+2. sorted()
+    . works for any iterable containers
+    . Does not modify the passed container return a list of sorted items
+
+==>Both of them use TimSort and both are stable
