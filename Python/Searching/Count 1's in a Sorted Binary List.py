@@ -51,7 +51,7 @@ def last(arr):
 
 def OptimizedCount(arr):
     firstApp = first(arr)
-    if first == -1:
+    if firstApp == -1:
         return 0
     else:
         return last(arr)-firstApp+1
