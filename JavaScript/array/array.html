@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+    <script>
+      let data = [9, 45, 7, 1, 2, 5, 7, 99, 5, 45];
+      //   for (let i = 0; i < data.length; i++) {
+      //     document.write(`Array ${i} =${data[i]} <br>`);
+      //   }
+      //   let x = 8;
+      //   document.write(data[x]);
+      function getElement() {
+        let el = parseInt(document.getElementById("ele").value);
+        if (el >= 0 && el < data.length) {
+          alert(`function called: ${data[el]} `);
+        } else {
+          alert(
+            `Please enter value less than ${
+              data.length
+            } type of the input is ${typeof el}`
+          );
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" id="ele" />
+    <button onclick="getElement()">Get Element</button>
+  </body>
+</html>
