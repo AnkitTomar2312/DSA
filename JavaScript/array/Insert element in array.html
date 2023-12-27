@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let array = [10, 20, 30, 40, 50, 60];
+      console.warn(array);
+      function insertEL() {
+        let newEl = document.getElementById("newEL").value;
+        let position = document.getElementById("position").value;
+        // for (let i = array.length - 1; i >= position; i--) {
+        //   array[i + 1] = array[i];
+        //   array[i] = newEl;
+        // }
+        array.splice(position, 0, newEl);
+        console.warn(array);
+      }
+    </script>
+  </head>
+  <body>
+    <p id="curr"></p>
+    <input id="newEL" type="number" placeholder="enter the number" />
+    <input id="position" type="number" placeholder="enter the positions" />
+    <button onclick="insertEL()">insert</button>
+  </body>
+</html>
