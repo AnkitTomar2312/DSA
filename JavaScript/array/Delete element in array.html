@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Given Array:</h1>
+    <p id="given"></p>
+    <input id="position" type="number" />
+    <button onclick="deleteElement()">Delete</button>
+    <h2 id="result"></h2>
+    <script>
+      let array = [20, 30, 40, 50, 70];
+      document.getElementById("given").innerHTML = array;
+      function deleteElement() {
+        let postion = parseInt(document.getElementById("position").value);
+        for (let i = postion; i <= array.length - 1; i++) {
+          array[i] = array[i + 1];
+        }
+        array.length = array.length - 1;
+        document.getElementById("result").innerHTML = array;
+      }
+    </script>
+  </body>
+</html>

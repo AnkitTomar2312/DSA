@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merging two array while loop</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [1, 3, 5, 7, 9, 14];
+      let arr2 = [2, 4, 6, 8, 10, 11, 12, 13, 15, 16, 17, 18];
+      let buff = [];
+      let i = 0;
+      let j = 0;
+      let k = 0;
+      while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+          buff[k] = arr1[i];
+          i = i + 1;
+        } else {
+          buff[k] = arr2[j];
+          j = j + 1;
+        }
+        k = k + 1;
+      }
+
+      while (i < arr1.length) {
+        buff[k] = arr1[i];
+        i = i + 1;
+        k = k + 1;
+      }
+      while (j < arr2.length) {
+        buff[k] = arr2[j];
+        j = j + 1;
+        k = k + 1;
+      }
+      console.warn(buff);
+    </script>
+  </body>
+</html>
