@@ -7,14 +7,24 @@
   </head>
   <body>
     <script>
-      function calling(x) {
-        console.warn(x);
-        if (x < 100) {
-          calling(x + 1);
+      //   function calling(x) {
+      //     console.warn(x);
+      //     if (x < 100) {
+      //       calling(x + 1);
+      //     }
+      //   }
+      //   let data = 0;
+      //   calling(data);
+
+      function factorial(x) {
+        if (x == 0) {
+          return 1;
         }
+        return x * factorial(x - 1);
       }
-      let data = 0;
-      calling(data);
+      let number = 5;
+
+      console.warn(factorial(5));
     </script>
   </body>
 </html>
