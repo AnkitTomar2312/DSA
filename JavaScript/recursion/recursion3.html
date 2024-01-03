@@ -7,19 +7,27 @@
   </head>
   <body>
     <script>
-      function car() {
-        console.warn(20);
+      //   function car() {
+      //     console.warn(20);
+      //   }
+      //   function car1() {
+      //     car();
+      //   }
+      //   function car2() {
+      //     car1();
+      //   }
+      //   function car3() {
+      //     car2();
+      //   }
+      //   car3();
+      function calling(x) {
+        console.log(x);
+        if (x == 0) {
+          return 0;
+        }
+        calling(x - 1);
       }
-      function car1() {
-        car();
-      }
-      function car2() {
-        car1();
-      }
-      function car3() {
-        car2();
-      }
-      car3();
+      calling(10);
     </script>
   </body>
 </html>
