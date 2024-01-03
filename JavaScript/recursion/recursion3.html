@@ -20,15 +20,27 @@
       //     car2();
       //   }
       //   car3();
-      function calling(x) {
-        // console.log(x);
-        if (x == 0) {
-          return 0;
+      //   function calling(x) {
+      //     // console.log(x);
+      //     if (x == 0) {
+      //       return 0;
+      //     }
+      //     calling(x - 1);
+      //     console.log(x);
+      //   }
+      //   calling(10);
+      function reversearrayusingstack(arr, start, end) {
+        console.warn(arr);
+        if (start <= end) {
+          temp = arr[start];
+          arr[start] = arr[end];
+          arr[end] = temp;
+          reversearrayusingstack(arr, start + 1, end - 1);
         }
-        calling(x - 1);
-        console.log(x);
       }
-      calling(10);
+      let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      let temp = 0;
+      reversearrayusingstack(arr, 0, arr.length - 1);
     </script>
   </body>
 </html>
