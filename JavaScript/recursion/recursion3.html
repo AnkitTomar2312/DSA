@@ -21,11 +21,12 @@
       //   }
       //   car3();
       function calling(x) {
-        console.log(x);
+        // console.log(x);
         if (x == 0) {
           return 0;
         }
         calling(x - 1);
+        console.log(x);
       }
       calling(10);
     </script>
