@@ -29,18 +29,20 @@
       //     console.log(x);
       //   }
       //   calling(10);
-      function reversearrayusingstack(arr, start, end) {
-        console.warn(arr);
-        if (start <= end) {
-          temp = arr[start];
-          arr[start] = arr[end];
-          arr[end] = temp;
-          reversearrayusingstack(arr, start + 1, end - 1);
-        }
-      }
+      //   function reversearrayusingstack(arr, start, end) {
+      //     console.warn(arr);
+      //     if (start <= end) {
+      //       temp = arr[start];
+      //       arr[start] = arr[end];
+      //       arr[end] = temp;
+      //       reversearrayusingstack(arr, start + 1, end - 1);
+      //     }
+      //   }
+      //   let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      //   let temp = 0;
+      //   reversearrayusingstack(arr, 0, arr.length - 1);
       let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-      let temp = 0;
-      reversearrayusingstack(arr, 0, arr.length - 1);
+      console.warn(arr.reverse());
     </script>
   </body>
 </html>
