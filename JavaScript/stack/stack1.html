@@ -6,17 +6,23 @@
     <title>Document</title>
   </head>
   <body>
+    <input id="newEl" type="number" placeholder="enter a number" />
+    <button onclick="push()">add Element</button>
+    <button onclick="pop()">remove Element</button>
+    <button>Show Stack</button>
     <script>
       let stack = [];
       let stackSize = stack.length;
       let max = 5;
-      function push(newVal) {
+      function push() {
+        let newVal = document.getElementById("newEl").value;
         if (stackSize < max) {
           stack[stackSize] = newVal;
           stackSize += 1;
         } else {
           alert("you can not insert " + newVal);
         }
+        console.warn(stack);
       }
       function pop() {
         if (stackSize > 0) {
@@ -25,13 +31,9 @@
         } else {
           alert("stack is empty");
         }
+        console.warn(stack);
       }
-      push(10);
-      push(20);
-      push(30);
-      push(40);
-      push(50);
-      pop();
+
       console.warn(stack);
     </script>
   </body>
