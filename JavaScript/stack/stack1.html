@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let stack = [];
+      let stackSize = stack.length;
+      let max = 5;
+      function push(newVal) {
+        if (stackSize < max) {
+          stack[stackSize] = newVal;
+          stackSize += 1;
+        } else {
+          alert("you can not insert " + newVal);
+        }
+      }
+      //   function pop() {
+      //     if (stackSize > 0) {
+      //       stackSize = stackSize - 1;
+      //       stack.length = stackSize;
+      //     } else {
+      //       alert("stack is empty");
+      //     }
+      //   }
+      push(10);
+      push(20);
+      push(30);
+      push(40);
+      push(50);
+      pop();
+      console.warn(stack);
+    </script>
+  </body>
+</html>
