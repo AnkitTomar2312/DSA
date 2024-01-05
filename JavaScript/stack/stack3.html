@@ -1,0 +1,62 @@
+<!-- Stack with class -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Stack with the class</h1>
+    <script>
+      class Stack {
+        item = [];
+        currentSize;
+        maxSize;
+        dummy = [];
+        i = 0;
+        lastRemoved;
+        constructor(size) {
+          this.maxSize = size;
+          this.currentSize = this.item.length;
+        }
+        push(newVal) {
+          if (this.currentSize == this.maxSize) {
+            alert("stack is full");
+          } else {
+            this.item[this.currentSize] = newVal;
+            this.currentSize = this.currentSize + 1;
+          }
+        }
+        pop() {
+          if (this.currentSize > 0) {
+            this.lastRemoved = this.item[this.currentSize - 1];
+            this.currentSize = this.currentSize - 1;
+            this.item.length = this.currentSize;
+          } else {
+            alert("stack is empty");
+          }
+          return this.lastRemoved;
+        }
+
+        reverseString(string) {
+          this.dummy = string.split("");
+          let reversed = [];
+          for (let i = 0; i < this.dummy.length; i++) {
+            this.push(this.dummy[i]);
+          }
+          for (let i = 0; i < this.dummy.length; i++) {
+            reversed[i] = this.pop();
+          }
+          console.warn(reversed.join(""));
+        }
+        display() {
+          console.warn(this.item);
+        }
+      }
+      st1 = new Stack(6);
+      st1.reverseString("Krisha");
+      st1.display();
+    </script>
+  </body>
+</html>
