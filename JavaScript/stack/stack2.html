@@ -1,1 +1,38 @@
 <!-- Stack string reverse -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let stack = [];
+      let currentLength = stack.length;
+      function push(item) {
+        stack[currentLength] = item;
+        currentLength += 1;
+      }
+      function pop() {
+        let removed = stack[currentLength - 1];
+        currentLength -= 1;
+        stack.length = currentLength;
+        return removed;
+      }
+
+      function reverseString(string) {
+        for (let i = 0; i < string.length; i++) {
+          push(string[i]);
+        }
+        for (let i = 0; i < string.length; i++) {
+          string[i] = pop();
+        }
+      }
+      let string = "Krishn";
+      string = string.split("");
+      reverseString(string);
+      console.warn(string.join(""));
+    </script>
+  </body>
+</html>
