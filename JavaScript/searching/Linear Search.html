@@ -5,5 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <input type="number" id="val" />
+    <button onclick="linearSearch()">Search</button>
+    <script>
+      function linearSearch() {
+        let array = [10, 20, 30, 40, 50, 60];
+        let toBeSearched = document.getElementById("val").value;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] == toBeSearched) {
+            console.warn(i);
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
