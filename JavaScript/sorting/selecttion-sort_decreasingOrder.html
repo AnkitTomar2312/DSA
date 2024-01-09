@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Selection sort with javascript In decreasing order</h1>
+    <script>
+      let array = [];
+
+      for (let i = 0; i < 100; i++) {
+        array.push(i);
+      }
+      //Complexity O(n2)
+      function SelectionSort(data) {
+        for (let i = 0; i < data.length; i++) {
+          let MaxId = i;
+          for (let j = i + 1; j < data.length; j++) {
+            if (data[j] > data[MaxId]) {
+              MaxId = j;
+            }
+          }
+          let temp = data[MaxId];
+          data[MaxId] = data[i];
+          data[i] = temp;
+        }
+      }
+      SelectionSort(array);
+      console.warn(array);
+    </script>
+  </body>
+</html>
