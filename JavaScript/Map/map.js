@@ -23,3 +23,4 @@ data.set("color", "green");
 data.delete("name");
 
 console.log(data);
+// How i can insert value in map dynamically
