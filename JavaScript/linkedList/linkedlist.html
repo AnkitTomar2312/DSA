@@ -25,13 +25,21 @@
           this.tail = newEntry;
           this.size++;
         }
+        traverse() {
+          let counter = 0;
+          let currentNode = this.head;
+          while (counter < this.size) {
+            console.warn(currentNode);
+            currentNode = currentNode.next;
+            counter++;
+          }
+        }
       }
 
       let link = new LinkedList();
       link.append(100);
       link.append(300);
-
-      console.warn(link);
+      link.traverse();
     </script>
   </body>
 </html>
