@@ -31,7 +31,7 @@
           let counter = 0;
           let currentNode = this.head;
           while (counter < this.size) {
-            console.warn(currentNode);
+            console.warn(currentNode, this.size);
             currentNode = currentNode.next;
             counter++;
           }
@@ -53,6 +53,27 @@
           this.size--;
         }
         //Insert node at any position Linked List
+        insertNode(value, pos) {
+          let counter = 1;
+          let lead = this.head;
+          let newEle = {
+            value: value,
+            next: null,
+          };
+          if (pos == 1) {
+            newEle.next = lead;
+            this.head = newEle;
+          } else {
+            while (counter < pos - 1) {
+              lead = lead.next;
+              counter++;
+            }
+            let after = lead.next;
+            lead.next = newEle;
+            newEle.next = after;
+          }
+          this.size++;
+        }
       }
 
       let link = new LinkedList();
@@ -61,7 +82,7 @@
       link.append(400);
       link.append(500);
       link.traverse();
-      link.delete(3);
+      link.insertNode(900, 4);
       link.traverse();
     </script>
   </body>
