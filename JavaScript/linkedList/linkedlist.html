@@ -10,7 +10,7 @@
       class LinkedList {
         constructor() {
           this.head = {
-            value: "200",
+            value: "100",
             next: null,
           };
           this.tail = this.head;
@@ -37,11 +37,30 @@
           }
         }
         //deleting a node from the list
+        delete(index) {
+          let counter = 1;
+          let lead = this.head;
+          if (index == 1) {
+            this.head = this.head.next;
+          } else {
+            while (counter < index - 1) {
+              lead = lead.next;
+              counter++;
+            }
+          }
+          let newNode = lead.next.next;
+          lead.next = newNode;
+          this.size--;
+        }
       }
 
       let link = new LinkedList();
-      link.append(100);
+      link.append(200);
       link.append(300);
+      link.append(400);
+      link.append(500);
+      link.traverse();
+      link.delete(3);
       link.traverse();
     </script>
   </body>
