@@ -16,6 +16,7 @@
           this.tail = this.head;
           this.size = 1;
         }
+        //adding a node in list
         append(newNode) {
           let newEntry = {
             value: newNode,
@@ -25,6 +26,7 @@
           this.tail = newEntry;
           this.size++;
         }
+        //traversing the list
         traverse() {
           let counter = 0;
           let currentNode = this.head;
@@ -34,6 +36,7 @@
             counter++;
           }
         }
+        //deleting a node from the list
       }
 
       let link = new LinkedList();
