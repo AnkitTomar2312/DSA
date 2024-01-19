@@ -75,6 +75,20 @@
           this.size++;
         }
         //searching node in linked list
+        searchNode(data) {
+          let result = undefined;
+          let lead = this.head;
+          let counter = 0;
+          while (counter < this.size) {
+            if (lead.value == data) {
+              return lead;
+            } else {
+              lead = lead.next;
+              counter++;
+            }
+          }
+          console.warn("Not Found");
+        }
       }
 
       let link = new LinkedList();
@@ -82,9 +96,7 @@
       link.append(300);
       link.append(400);
       link.append(500);
-      link.traverse();
-      link.insertNode(900, 4);
-      link.traverse();
+      console.warn(link.searchNode(400));
     </script>
   </body>
 </html>
