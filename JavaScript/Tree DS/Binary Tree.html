@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Node {
+        constructor(val) {
+          this.value = val;
+          this.left = null;
+          this.right = null;
+        }
+      }
+      class BSTree {
+        constructor() {
+          this.root = null;
+        }
+        isEmpty() {
+          return this.root === null;
+        }
+      }
+
+      let Tree = new BSTree();
+      console.log(Tree.isEmpty());
+    </script>
+  </body>
+</html>
