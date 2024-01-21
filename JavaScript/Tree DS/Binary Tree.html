@@ -59,7 +59,13 @@
             this.inOrder(root.right);
           }
         }
-        postOrder() {}
+        postOrder(root) {
+          if (root) {
+            this.postOrder(root.left);
+            this.postOrder(root.right);
+            console.warn(root.value);
+          }
+        }
       }
 
       let Tree = new BSTree();
@@ -71,7 +77,8 @@
       Tree.makeTree(55);
       // console.log(Tree);
       // Tree.preOrder(Tree.root);
-      Tree.inOrder(Tree.root);
+      // Tree.inOrder(Tree.root);
+      Tree.postOrder(Tree.root);
     </script>
   </body>
 </html>
