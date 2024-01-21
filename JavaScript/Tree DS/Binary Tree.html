@@ -44,6 +44,14 @@
             }
           }
         }
+        //depth first search:-
+        preOrder(root) {
+          if (root) {
+            console.warn(root.value);
+            this.preOrder(root.left);
+            this.preOrder(root.right);
+          }
+        }
       }
 
       let Tree = new BSTree();
@@ -53,7 +61,8 @@
       Tree.makeTree(5);
       Tree.makeTree(100);
       Tree.makeTree(55);
-      console.log(Tree);
+      // console.log(Tree);
+      Tree.preOrder(Tree.root);
     </script>
   </body>
 </html>
