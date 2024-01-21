@@ -52,7 +52,13 @@
             this.preOrder(root.right);
           }
         }
-        inOrder() {}
+        inOrder(root) {
+          if (root) {
+            this.inOrder(root.left);
+            console.warn(root.value);
+            this.inOrder(root.right);
+          }
+        }
       }
 
       let Tree = new BSTree();
@@ -63,7 +69,8 @@
       Tree.makeTree(100);
       Tree.makeTree(55);
       // console.log(Tree);
-      Tree.preOrder(Tree.root);
+      // Tree.preOrder(Tree.root);
+      Tree.inOrder(Tree.root);
     </script>
   </body>
 </html>
