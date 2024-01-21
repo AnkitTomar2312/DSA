@@ -68,6 +68,20 @@
         }
         //depth first search complted
         //Breadth first search begin
+        BFSTraversing() {
+          let queue = [];
+          queue.push(this.root);
+          while (queue.length) {
+            let current = queue.shift();
+            if (current.left) {
+              queue.push(current.left);
+            }
+            if (current.right) {
+              queue.push(current.right);
+            }
+            console.warn(current.value);
+          }
+        }
       }
 
       let Tree = new BSTree();
@@ -80,7 +94,8 @@
       // console.log(Tree);
       // Tree.preOrder(Tree.root);
       // Tree.inOrder(Tree.root);
-      Tree.postOrder(Tree.root);
+      // Tree.postOrder(Tree.root);
+      Tree.BFSTraversing();
     </script>
   </body>
 </html>
