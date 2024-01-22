@@ -83,11 +83,11 @@
           }
         }
         //find minimum and Maximum Value
-        minValue() {
-          if (!this.root.left) {
-            return this.root.value;
+        minValue(root) {
+          if (!root.left) {
+            return root.value;
           } else {
-            return minValue(this.root.left);
+            return this.minValue(root.left);
           }
         }
       }
@@ -104,6 +104,7 @@
       // Tree.inOrder(Tree.root);
       // Tree.postOrder(Tree.root);
       // Tree.BFSTraversing();
+      console.log(Tree.minValue(Tree.root));
     </script>
   </body>
 </html>
