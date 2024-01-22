@@ -83,6 +83,13 @@
           }
         }
         //find minimum and Maximum Value
+        minValue() {
+          if (!this.root.left) {
+            return this.root.value;
+          } else {
+            return minValue(this.root.left);
+          }
+        }
       }
 
       let Tree = new BSTree();
@@ -96,7 +103,7 @@
       // Tree.preOrder(Tree.root);
       // Tree.inOrder(Tree.root);
       // Tree.postOrder(Tree.root);
-      Tree.BFSTraversing();
+      // Tree.BFSTraversing();
     </script>
   </body>
 </html>
