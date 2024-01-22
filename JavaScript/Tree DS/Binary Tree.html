@@ -82,7 +82,7 @@
             console.warn(current.value);
           }
         }
-        //find minimum and Maximum Value
+        //find minimum Value
         minValue(root) {
           if (!root.left) {
             return root.value;
@@ -90,6 +90,7 @@
             return this.minValue(root.left);
           }
         }
+        //find Maximum Value
       }
 
       let Tree = new BSTree();
@@ -104,7 +105,8 @@
       // Tree.inOrder(Tree.root);
       // Tree.postOrder(Tree.root);
       // Tree.BFSTraversing();
-      console.log(Tree.minValue(Tree.root));
+      //console.log(Tree.minValue(Tree.root));
+      console.log(Tree.maxValue(Tree.root));
     </script>
   </body>
 </html>
