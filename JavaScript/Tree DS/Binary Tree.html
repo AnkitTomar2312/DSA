@@ -91,6 +91,13 @@
           }
         }
         //find Maximum Value
+        maxValue(root) {
+          if (!root.right) {
+            return root.value;
+          } else {
+            return this.maxValue(root.right);
+          }
+        }
       }
 
       let Tree = new BSTree();
