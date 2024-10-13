@@ -2,17 +2,23 @@
 using namespace std;
 int main(){
     int n;
-    cout<<"Enter a number";
+    cout<<"Enter a number ";
     cin>>n;
-    int i=1;
+    int i=0;
     int sum=0;
+    // while(i<=n){
+    //     cout<< "Current value of i is: "<<i<<"\n";
+    //     sum=sum+i;
+    //     i++;
+    // }
+    // cout<<"The total of entered numbe is: "<< sum;      
     while(i<=n){
-        cout<< "Current value of i is: "<<i<<"\n";
-        sum=sum+i;
+        if(i%2==0){
+            sum=sum+i;
+        }
         i++;
     }
-    cout<<"The total of entered numbe is: "<< sum;        
-    
+    cout<<"The sum of the entered even nmbers are: "<<sum;
     return 0;
 
 }
