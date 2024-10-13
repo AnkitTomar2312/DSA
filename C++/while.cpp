@@ -14,6 +14,7 @@ int main(){
     // cout<<"The total of entered numbe is: "<< sum;      
     while(i<=n){
         if(i%2==0){
+            cout<<i<<"-is a Prime Number"<<endl;
             sum=sum+i;
         }
         i++;
