@@ -45,14 +45,30 @@ int main(){
 4321
 4321
  */
+// while(i<=rows){
+//     int j=cols;
+//     while(j>=1){
+//         cout<<j<<" ";
+//         j--;
+//     }
+//     cout<<endl;
+//     i++;
+// }
+/*
+123
+456
+789
+*/
+int count=1;
 while(i<=rows){
-    int j=cols;
-    while(j>=1){
-        cout<<j<<" ";
-        j--;
+    int j=1;
+    while(j<=cols){
+        cout<<count<<" ";
+        count++;j++;
     }
     cout<<endl;
     i++;
+
 }
     return 0;
 }
