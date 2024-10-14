@@ -30,14 +30,29 @@ int main(){
     1234
     1234
     */
-   while(i<=rows){
-    int j=1;
-    while(j<=cols){
+//    while(i<=rows){
+//     int j=1;
+//     while(j<=cols){
+//         cout<<j<<" ";
+//         j++;
+//     }
+//     cout<<endl;
+//     i++;
+//    }
+/*
+4321
+4321
+4321
+4321
+ */
+while(i<=rows){
+    int j=cols;
+    while(j>=1){
         cout<<j<<" ";
-        j++;
+        j--;
     }
     cout<<endl;
     i++;
-   }
+}
     return 0;
 }
