@@ -1,0 +1,41 @@
+#include<iostream>
+#include<climits>  // Include this for INT_MIN and INT_MAX
+using namespace std;
+
+// Function to get minimum element from array
+int getmin(int num[], int n) {
+    int mini = INT_MAX;
+    for(int i = 0; i < n; i++) {
+        mini = min(mini, num[i]);
+    }
+    return mini;
+}
+
+// Function to get maximum element from array
+int getmax(int num[], int n) {
+    int maxi = INT_MIN;
+    for(int i = 0; i < n; i++) {
+        maxi = max(maxi, num[i]);
+    }
+    return maxi;
+}
+
+int main () {
+    int num[1000], size;
+
+    // Take input for size of array
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    // Input elements in the array
+    cout << "Enter the elements of the array: ";
+    for(int i = 0; i < size; i++) {
+        cin >> num[i];  // Taking input for each element
+    }
+
+    // Print the minimum and maximum elements
+    cout << "Minimum element is: " << getmin(num, size) << endl;
+    cout << "Maximum element is: " << getmax(num, size) << endl;
+
+    return 0;
+}
