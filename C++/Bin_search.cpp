@@ -26,6 +26,6 @@ int odd[5]={4,7,18,40,58};
 int even[6]={4,7,18,40,58,70};
 int oddser=BinSrch(odd,58,5);
 cout<<"This is the odd arr result: "<<oddser<<endl;
-int evenser=BinSrch(even,40,6);
+int evenser=BinSrch(even,90,6);
 cout<<"This is the even arr result: "<<evenser<<endl;
 }
